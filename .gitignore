@@ -1,0 +1,56 @@
+# Ruby / Bundler
+*.gem
+*.rbc
+.bundle/
+vendor/bundle/
+Gemfile.lock
+coverage/
+yardoc/
+_yardoc/
+tmp/
+log/
+*.log
+*.pid
+*.sqlite3
+
+# ActiveRecord / database
+db/*.sqlite3
+db/*.sqlite3-journal
+db/schema.rb
+db/structure.sql
+*.swp
+
+# System / editor
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+*.iml
+
+# Docker
+*.env
+docker-compose.override.yml
+docker-compose.override.yml.backup
+**/Dockerfile.*
+**/docker-compose.override.yml
+**/docker-compose.override.yml.backup
+*.log
+*.pid
+
+# Postgres / database volumes
+postgres_data/
+
+# Node / assets (if you use JS)
+node_modules/
+yarn-error.log
+package-lock.json
+*.tgz
+
+# Coverage / testing
+coverage/
+rspec_example_status
+
+# Nginx (if you don't want to commit dev certs)
+nginx/ssl/
+
