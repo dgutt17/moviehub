@@ -8,6 +8,3 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 COPY . .
-
-EXPOSE 9292
-

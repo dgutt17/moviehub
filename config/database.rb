@@ -1,4 +1,4 @@
-require "activerecord"
+require "active_record"
 require "logger"
 
 db_url = ENV.fetch("DATABASE_URL")
