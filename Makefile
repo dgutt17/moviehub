@@ -1,5 +1,5 @@
 APP_NAME=moviehub
-IMAGE_NAME=$(APP_NAME)_image
+IMAGE_NAME=$(APP_NAME)
 TAG=latest
 
 #.PHONY: build

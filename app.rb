@@ -14,6 +14,12 @@ class App < Roda
 
   route do |r|
     r.root do
+      # Test 1: Ping the connection
+      puts "ActiveRecord connection: #{ActiveRecord::Base.connection.active?}"  # true/false
+
+      # Test 2: Simple query
+      puts "Query Result: #{ActiveRecord::Base.connection.execute('SELECT 1').values}"
+
       { status: "running" }
     end
 

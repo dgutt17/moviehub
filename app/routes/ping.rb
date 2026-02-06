@@ -7,7 +7,14 @@ module Routes
       app.route do |r|
         r.on "ping" do
           r.get do
-            { status: "ok", message: "pong" }
+            # Test 1: Ping the connection
+db_connection = ActiveRecord::Base.connection.active?
+            puts "ActiveRecord connection: #{db_connection}"  # true/false
+
+            # Test 2: Simple query
+            query_result = ActiveRecord::Base.connection.execute('SELECT 1').values
+            puts "Query Result: #{query_result}"
+            { status: "ok", message: "pong", db_connection: db_connection, query_result: query_result}
           end
         end
       end

@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    image: moviehub_image:latest
+    image: moviehub:latest
     command: bundle exec puma -C config/puma.rb
     environment:
       DATABASE_URL: postgres://postgres:postgres@db:5432/app_development
@@ -16,6 +16,14 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: app_development
+    command: 
+      - "postgres"
+      - "-c"
+      - "log_statement=all"
+      - "-c"
+      - "log_destination=stderr"
+      - "-c"
+      - "logging_collector=off"
     volumes:
       - postgres_data:/var/lib/postgresql/18/data
 

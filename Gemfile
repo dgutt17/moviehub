@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "4.0.1"
 
+gem "rake"
+
 # Web
 gem "roda"
 gem "rack"
@@ -16,4 +18,15 @@ gem "logger"
 
 # Production server (recommended)
 gem "puma"
+
+group :development do 
+  gem "pry-byebug"
+end
+
+group :test do 
+  gem "rspec"
+  gem "rack-test"
+  gem "pry-byebug"
+  gem 'shoulda-matchers'
+end
 
